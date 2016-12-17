@@ -1,8 +1,5 @@
 (ns ring.core.protocols
-  "Protocols necessary for Ring."
-  {:added "1.6"}
-  (:require [clojure.java.io :as io]
-            [ring.util.response :as response]))
+  (:import (System.IO Directory Path Stream)))
 
 (defprotocol ^{:added "1.6"} StreamableResponseBody
   "A protocol for writing data to the response body via an output stream."
@@ -25,12 +22,12 @@
     (with-open [writer (response-writer response output-stream)]
       (doseq [chunk body]
         (.write writer (str chunk)))))
-  java.io.InputStream
-  (write-body-to-stream [body _ output-stream]
+  #_java.io.InputStream
+  #_(write-body-to-stream [body _ output-stream]
     (with-open [out output-stream, body body]
       (io/copy body out)))
-  java.io.File
-  (write-body-to-stream [body _ output-stream]
+  #_java.io.File
+  #_(write-body-to-stream [body _ output-stream]
     (with-open [out output-stream]
       (io/copy body out)))
   nil
