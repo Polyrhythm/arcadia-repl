@@ -1,1 +1,420 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Phys",
+				"Physics2D"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/repl/core.clj",
+			"settings":
+			{
+				"buffer_size": 2172,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/squarepeg/examples.clj",
+			"settings":
+			{
+				"buffer_size": 4246,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/squarepeg/core.clj",
+			"settings":
+			{
+				"buffer_size": 18386,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/repl/parser.clj",
+			"settings":
+			{
+				"buffer_size": 1983,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "(ns repl.parser"
+			}
+		},
+		{
+			"contents": "repl.parser=> ",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix",
+				"name": "*arcadia-repl*",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/selfsame/unity/arcadia-repl",
+		"/home/selfsame/unity/arcadia-repl/Assets",
+		"/home/selfsame/unity/arcadia-repl/Assets/Arcadia",
+		"/home/selfsame/unity/arcadia-repl/Assets/Arcadia/Source",
+		"/home/selfsame/unity/arcadia-repl/Assets/Arcadia/Source/arcadia",
+		"/home/selfsame/unity/arcadia-repl/Assets/repl",
+		"/home/selfsame/unity/arcadia-repl/Assets/ring/core",
+		"/home/selfsame/unity/arcadia-repl/Assets/ring/middleware/multipart_params",
+		"/home/selfsame/unity/arcadia-repl/Assets/ring/util",
+		"/home/selfsame/unity/arcadia-repl/Assets/squarepeg"
+	],
+	"file_history":
+	[
+		"/home/selfsame/unity/night-farm-returns/Assets/hard/input.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/repl/analyze.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/instaparse/core.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/instaparse/auto_flatten_seq.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/nightlight/core.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/ring/core/protocols.clj",
+		"/home/selfsame/unity/arcadia-repl/Assets/ring-core/src/ring/core/protocols.clj",
+		"/home/selfsame/unity/night-farm-returns/Assets/hard/core.clj",
+		"/home/selfsame/unity/night-farm-returns/Assets/game/foo.clj",
+		"/home/selfsame/unity/night-farm-returns/Assets/unity-wave-function-collapse/OverlapWFC.cs",
+		"/home/selfsame/unity/night-farm-returns/Assets/unity-wave-function-collapse/Training.cs",
+		"/home/selfsame/unity/night-farm-returns/Assets/unity-wave-function-collapse/TilePainter.cs",
+		"/home/selfsame/unity/night-farm-returns/Assets/game/data.clj",
+		"/home/selfsame/unity/procadia/arcadia.sublime-project"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+			"/home/selfsame/unity/arcadia-repl/Assets/instaparse"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Character",
+			"java",
+			"joe",
+			"with-env-bindings",
+			"eval",
+			"cmpt",
+			"keep-upright",
+			">v3",
+			"log",
+			"\"shoot\"",
+			"\"shoot",
+			"shoot",
+			"BoxCollider",
+			"z"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/repl/core.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1122,
+								1122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 528.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/squarepeg/examples.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1374,
+								1374
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 536.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/squarepeg/core.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17337,
+								17337
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6590.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/repl/parser.clj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1983,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1983,
+								1983
+							]
+						],
+						"settings":
+						{
+							"auto_name": "(ns repl.parser",
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 816.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"arcadia_repl": true,
+							"gutter": false,
+							"line_numbers": false,
+							"scope_name": "source.arcadia",
+							"syntax": "Packages/arcadia-repl/Clojure.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.54441136387,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "arcadia.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
