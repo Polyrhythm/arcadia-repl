@@ -28,7 +28,7 @@
 (defrule -ns          [-symbol \/ -symbol])
 (defrule -kw          [\: (mkalt -ns -symbol)])
 (defrule -qkw         [\: \: -symbol])
-(defrule -illegal [{anything +}])
+(defrule -illegal [{! whitespace} {anything +}])
 
 
 (def int- (mkret (mkseq w* -integer) (token :int  {:number true})))
@@ -46,8 +46,8 @@
 (def illegal- (mkret (mkseq w* -illegal)         (token :illegal   {})))
 
 
-(defrule atom-    (mkalt int- ns- symbol- qkw- kw- ))
-(defrule form     (mkalt atom- col- comment- ))
+(defrule atom-    (mkalt int- ns- symbol- qkw- kw-))
+(defrule form     (mkalt col- atom- comment- ))
 (defrule list-    [po- {form *} pc-])
 (defrule vector-  [vo- {form *} vc-])
 (defrule map-     [mo- {form *} mc-])

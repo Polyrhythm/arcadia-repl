@@ -40,6 +40,13 @@
   (set! (.text input) @ns-str)
   (reset! prompt (count @ns-str)))
 
+(defn remove-enter-newline! [input]
+  (let [caret (.caretPosition input)
+        s (.text input)]
+    (set! (.text input)
+      (str (subs s 0 (dec caret))
+           (subs s caret)))))
+
 (defn history! [input n]
   (let [idx (+ @histidx (- n))
         histcount (count @history)]
@@ -54,15 +61,15 @@
     (set! (.caretPosition input) (count (.text input))))))
 
 (defn send-input [input]
+  (remove-enter-newline! input)
   (let [form (subs (.text input) @prompt)
-        trimmed-form (subs form 0 (dec (count form)))
         {:keys [result env]} (arcadia.repl/repl-eval-print @repl-env form)]
-    (when-not (#{"" (last @history)} trimmed-form)
-      (swap! history conj trimmed-form))
+    (when-not (#{"" (last @history)} form)
+      (swap! history conj form))
     (reset! histidx -1)
     (reset! repl-env env)
     (set! (.text input) 
-          (str (.text input) result "\n" (ns-name (:*ns* @repl-env)) "=>"))
+          (str (.text input) "\n" result (ns-name (:*ns* @repl-env)) "=>"))
     (reset! prompt (count (.text input)))
     (set! (.caretPosition input) @prompt)))
 
