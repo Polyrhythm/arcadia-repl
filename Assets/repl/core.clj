@@ -31,7 +31,10 @@
 
 (defn ->input-field [o] (cmpt o UnityEngine.UI.InputField))
 
-
+(defn on-value-changed [go callback]
+ (let [input-field (cmpt go UnityEngine.UI.InputField)]
+  (.. input-field onValueChanged
+   (AddListener (fn [val] (callback val))))))
 
 (defn clear [input]
   (set! (.text input) @ns-str)

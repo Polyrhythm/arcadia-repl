@@ -90,11 +90,14 @@
             (str s (colorize t))))
       "" col)))
 
-(time (let [c (cmpt (object-named "visual") UnityEngine.UI.Text)]
-  (set! (.text c) 
-    (highlite (:r (code "(a:b#5 [foo/bar]) :foo ::bar :a/b (((())))" {} {} {}))))))
 
+(require 'repl.core)
 
+(repl.core/on-value-changed (object-named "InputField") 
+  (fn [s]
+    (let [c (cmpt (object-named "visual") UnityEngine.UI.Text)
+          res (highlite (:r (code s {} {} {})))]
+      (set! (.text c) (if-not (= res "") res s)))))
 
 
 '(parse (ns- "foo/bar" {} {} {}))
