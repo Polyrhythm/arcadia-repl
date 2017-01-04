@@ -1,6 +1,8 @@
 (ns repl.core
   (:use arcadia.core)
-  (:require arcadia.repl)
+  (:require 
+    arcadia.repl
+    repl.parser)
   (:import
     [UnityEngine Input KeyCode]))
 
@@ -37,8 +39,8 @@
    (AddListener (fn [val] (callback val))))))
 
 (defn clear [input]
-  (set! (.text input) @ns-str)
-  (reset! prompt (count @ns-str)))
+  (set! (.text input) (str (:*ns* @repl-env) "=>"))
+  (reset! prompt (count (str (:*ns* @repl-env) "=>"))))
 
 (defn remove-enter-newline! [input]
   (let [caret (.caretPosition input)
@@ -50,7 +52,7 @@
 (defn history! [input n]
   (let [idx (+ @histidx (- n))
         histcount (count @history)]
-    (log "history!" idx (subs (.text input) 0 @prompt))
+    ;(log "history!" idx (subs (.text input) 0 @prompt))
   (if (< -1 idx histcount)
     (do 
       (reset! histidx idx)
@@ -75,6 +77,10 @@
 
 (defn check-input [o]
   (let [input (->input-field o)]
+    (when (< (.selectionAnchorPosition input) @prompt)
+      (set! (.selectionAnchorPosition input) @prompt))
+    (when (< (.selectionFocusPosition input) @prompt)
+      (set! (.selectionFocusPosition input) @prompt))
     (cond 
       (key-down? :up)   (history! input -1)
       (key-down? :down) (history! input  1)
@@ -87,5 +93,14 @@
            (not (key? "left shift")))
       (send-input input))))
 
-'(hook+ (object-named "InputField") :update #'repl.core/check-input)
+(defn input-change [o] 
+  (on-value-changed o
+    (fn [s]
+      (let [c (cmpt (object-named "visual") UnityEngine.UI.Text)
+            res (repl.parser/parse s)]
+        (set! (.text c) (if-not (= res "") res s))))))
 
+'(hook+ (object-named "InputField") :update #'repl.core/check-input)
+'(hook+ (object-named "InputField") :start  #'repl.core/input-change)
+
+'(input-change (object-named "InputField"))
